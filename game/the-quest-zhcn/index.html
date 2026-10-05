@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Quest 简体中文汉化开发记录，附 v0.3.5 公开测试补丁下载、安装与恢复方法。">
+    <title>The Quest 汉化记录与补丁下载 | Yang Xiao</title>
+    <link rel="stylesheet" href="../game.css">
+</head>
+<body>
+<div class="page">
+    <nav class="site-nav" aria-label="网站导航"><a href="../../">Yang Xiao · 首页</a><a href="../">Game</a></nav>
+    <main>
+        <article>
+            <header>
+                <p class="meta"><time datetime="2026-10-05">2026.10.05</time> · 开发记录</p>
+                <h1>想一个人四处乱逛，<br>于是做起了 The Quest 汉化</h1>
+                <p class="meta">Steam 1.9.7 · 主游戏与冰火之岛 · v0.3.5 公开测试版</p>
+            </header>
+            <p>我很喜欢剑与魔法的世界，也偏爱独狼式的自由探索：一个人带着装备出门，看到岔路就拐进去，想去哪就去哪。买下 Steam 版 The Quest 后，我想更舒服地读对白、看任务，于是开始折腾简体中文补丁。范围先覆盖主游戏和冰火之岛资料片；人名、国名、城市名和种族名保留英文，剧情先用机器初译，再重点校正属性、装备和任务术语。像把“选择种族”译成“选择比赛”，这样的笑话当然得先修掉。</p>
+            <p>真正费时间的是让中文显示出来。最初有缺字、空白，也有改完资源后启动失败的情况，需要反复恢复原版排查。字体终于能显示中文，长对白却又留在英文里：游戏先把正文排成多行并缓存，绘制时再翻译已经错过了完整句子。后来把对白提前换成中文，警卫与乞丐的正文才正常显示。翻译表里有中文，还得打开游戏看字形、换行和选项是否真的能用。</p>
+            <p>现在的 v0.3.5 仍在修改。Matras 警卫正文、乞丐正文及两个回应选项已经显示中文，措辞还有些机翻味；主线任务介绍、<code>sorted</code> 标签、地图教学及退出保存提示仍有英文遗漏。Bryl 首次开场本轮没有重新触发，仍待验证。下面两图来自此前的内部测试版；公开下载改用 Noto Sans SC 派生字体，字形和排版与截图会有差别。后面还要补齐遗漏，慢慢把对白改得更自然。</p>
+            <figure><a href="../images/quest-guard.jpg"><img src="../images/quest-guard.jpg" width="1707" height="1067" alt="Matras 城市警卫的对话正文显示中文" loading="lazy"></a><figcaption>内部测试版实机截图（微软雅黑 UI）：Matras 警卫正文已显示中文，措辞仍待润色。点图查看原图。</figcaption></figure>
+            <figure><a href="../images/quest-beggar.jpg"><img src="../images/quest-beggar.jpg" width="1707" height="1067" alt="Matras 乞丐的对话正文与两个回应选项均显示中文" loading="lazy"></a><figcaption>内部测试版实机截图（微软雅黑 UI）：乞丐正文和两个回应选项显示中文；未遍历全部任务与分支。</figcaption></figure>
+            <section class="download-box" id="download" aria-labelledby="download-title">
+                <h2 id="download-title">补丁下载</h2>
+                <p>适用于 Windows Steam 版 <strong>The Quest 1.9.7</strong>，包含主游戏及冰火之岛的汉化改动。未安装冰火之岛也可使用，会跳过资料片补丁。剧情为机器初译，当前仍有英文遗漏。</p>
+                <a class="download-button" href="../downloads/TheQuest-zhCN-v0.3.5.zip" download>下载汉化补丁 · v0.3.5</a>
+                <p class="file-info" id="package-size">ZIP · 1.80 MB · 差量安装包，保留原版备份，可一键恢复。</p>
+                <details><summary>查看下载校验值</summary><code class="checksum" id="package-sha">abefd1dcab8cf4859d3327807f89164ad2d8e12b3919b9a38a049e1010bb0a2b</code><p><a href="../downloads/SHA256SUMS.txt">下载 SHA-256 校验文件</a></p></details>
+            </section>
+            <section aria-labelledby="install-title">
+                <h2 id="install-title">安装与恢复</h2>
+                <ol>
+                    <li>下载并完整解压，关闭游戏；如已安装旧补丁，先用旧版恢复工具还原。</li>
+                    <li>双击 <code>Install.cmd</code>，按提示选择游戏目录；安装成功后，从 Steam 启动游戏。</li>
+                    <li>需要恢复英文时，关闭游戏并双击 <code>Restore.cmd</code>；原版备份会保留。</li>
+                </ol>
+                <p>公开包仅包含汉化差量、Noto Sans SC 派生字体与显示适配组件，安装时读取自己的原版游戏文件。新字体已通过编码、字距和排版检查，尚未重新完成游戏内验证。详细使用说明和字体许可证随包附带。其他创意工坊世界与 PDF 手册尚未覆盖。</p>
+            </section>
+        </article>
+    </main>
+    <footer>Yang Xiao · <a href="../">返回 Game</a> · <a href="../../">返回个人主页</a></footer>
+</div>
+</body>
+</html>
