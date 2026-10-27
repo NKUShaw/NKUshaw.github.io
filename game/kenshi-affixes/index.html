@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="KenshiAffixes 开发记录：为 Kenshi 近战武器与护甲加入持久随机词条，支持 NPC、商店、探索容器与打造，附 v0.6.0 工坊订阅和安装说明。">
+    <title>Kenshi 装备随机词条 Mod 记录 | Yang Xiao</title>
+    <link rel="stylesheet" href="../game.css">
+</head>
+<body>
+<div class="page">
+    <nav class="site-nav" aria-label="网站导航"><a href="../../">Yang Xiao · 首页</a><a href="../">Game</a></nav>
+    <main>
+        <article>
+            <header>
+                <p class="meta"><time datetime="2026-10-26">2026.10.26</time> · 开发记录</p>
+                <h1>给 Kenshi 的装备加一点期待：随机词条 Mod 记录</h1>
+                <p class="meta">KenshiAffixes · 装备随机词条 · v0.6.0 · 中英双语</p>
+            </header>
+            <p>Kenshi 很适合漫无目的地走：经过一座城，逛逛商店，钻进一处遗迹，或者打完一场艰难的仗再翻翻战利品。这次做的 KenshiAffixes，就是想给这些时刻多加一点期待。同样一把刀、同样一件护甲，除了原本的品质，还能有自己的词条组合。</p>
+            <p>词条落在每一件装备上，生成后随物品保存；同一件保留下来的装备，查看、交易和读档都沿用已有结果。原有制造商、模型和品质继续保留，普通低品质装备也可能没有词条。敌人同样会使用装备上的加成，拿到战利品之前，先得面对它的主人。</p>
+
+            <section class="download-box" id="subscribe" aria-labelledby="subscribe-title">
+                <h2 id="subscribe-title">创意工坊订阅</h2>
+                <p>当前公开版本为 <strong>v0.6.0</strong>，词条名称与属性说明中英并列。需要先安装 <strong>RE_Kenshi</strong> 加载器，仅订阅本 Mod 不会自动安装前置。</p>
+                <a class="download-button" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3821983877">前往 Steam 创意工坊订阅</a>
+                <p class="file-info"><a href="https://github.com/BFrizzleFoShizzle/RE_Kenshi#installation">RE_Kenshi 官方安装说明</a> · 工坊 ID：3821983877</p>
+            </section>
+
+            <section aria-labelledby="sources-title">
+                <h2 id="sources-title">从哪里获得词条装备</h2>
+                <ul>
+                    <li><strong>NPC 装备：</strong>新生成角色穿戴的近战武器与护甲，按角色原始战斗实力决定词条等级。卡特龙、艾萨塔、凤凰、锡拳、哔噗等 12 名指定角色采用预设词条顺序。</li>
+                    <li><strong>商店库存：</strong>商品可以带有词条，词条数量与等级也会提高价格，保留游戏原本的买卖折价。</li>
+                    <li><strong>探索容器：</strong>符合条件的非玩家装备容器结合装备品质、据点守军和首领模板强度生成词条。强据点的新战利品还有机会提高原生品质，但不保证每个箱子都有高级装备。</li>
+                    <li><strong>玩家打造：</strong>按实际工匠的对应锻造技能和最终成品品质生成词条。旧的无词条成品不会追溯补掷，玩家储物箱也不会替装备重新掷词条。</li>
+                </ul>
+                <p>词条等级 iLvl 为 1–100，保留 T1–T5 标记；提示文字另分灰、白、绿、蓝、紫、橙、红七档颜色。同一件装备共用一个词条等级，颜色不替代原版品质。</p>
+            </section>
+
+            <section aria-labelledby="effects-title">
+                <h2 id="effects-title">词条能带来什么</h2>
+                <p>近战武器可以获得锋锐、重击、撕裂、精准、招架，分别影响切割伤害、钝击伤害、流血倍率与近战攻防。护甲则有守御、强攻、轻捷、潜影、灵巧、坚韧、缓冲，以及 v0.6.0 新增的灵动和搏击，覆盖攻防、运动、潜行、敏捷、抗性、闪避和武术。</p>
+                <p>新生成词条的强度随 iLvl 连续成长：武器切割或钝击伤害最高 +50%，武器近战攻防最高各 +15；护甲近战攻防、闪避与武术单条最高 +10。护甲的强攻与守御穿戴合计各有 +25 上限，灵动与搏击可以随穿戴部件叠加。装备原有惩罚仍然存在。</p>
+                <p>抗性词条作用于“剩余抗性”。例如原本 60% 的切割抗性，加上剩余抗性 +25%，结果是 70%。背包里的装备不提供穿戴加成。</p>
+                <p>iLvl 61–100 还可能出现稀有战斗词条：<strong>汲血</strong>按实际近战伤害恢复自身可恢复的钝击昏迷伤害，合计上限 10%；<strong>致命</strong>增加暴击率，叠加上限 50%；<strong>毁灭</strong>提高暴击伤害，基础 ×1.5，最高 ×2。汲血不治疗切割伤口、不补血池、不再生断肢；暴击与汲血暂不支持弩或徒手攻击。</p>
+            </section>
+
+            <section aria-labelledby="meitou-title">
+                <h2 id="meitou-title">让名刀有自己的组合</h2>
+                <p>名刀采用固定特色词条：32 种原版武器对应 24 套预设，每把三个满值词条，红色 Lv100 / T5。同款名刀的组合固定，不随持有人或获取方式变化，也不会因此凭空增加新的名刀。</p>
+                <ul>
+                    <li><strong>落日：</strong>锋锐、致命、毁灭。</li>
+                    <li><strong>碎片斧：</strong>重击、致命、毁灭。</li>
+                    <li><strong>忍者刀：</strong>致命、毁灭、汲血。</li>
+                    <li><strong>圣骑士十字：</strong>锋锐、重击、招架。</li>
+                </ul>
+                <p>名刀固定组合优先于 NPC 预设。旧名刀词条会在载入后迁移到对应组合，保留物品标识和原始基础属性，重复读取不会叠加；无需重新获取名刀。</p>
+            </section>
+
+            <section aria-labelledby="install-title">
+                <h2 id="install-title">安装与个人配置</h2>
+                <ol>
+                    <li>备份存档，按 <a href="https://github.com/BFrizzleFoShizzle/RE_Kenshi#installation">RE_Kenshi 官方说明</a>安装加载器。当前验证环境为 Windows x64、RE_Kenshi 0.3.5 与兼容的 Kenshi 1.0.65；Steam 1.0.68 请通过官方安装程序配置兼容环境。</li>
+                    <li>订阅工坊条目，在启动器中勾选 <code>KenshiAffixes</code>。如果之前装过本地版，将旧的 <code>mods/KenshiAffixes</code> 移出游戏目录，保持只加载一份。</li>
+                    <li>重启游戏并读取存档。仅为启用词条无需 Import；普通 NPC 的已有无词条装备不会批量补掷。</li>
+                </ol>
+                <p>个人覆盖配置与运行日志位于 <code>%LOCALAPPDATA%\KenshiAffixes</code>，可用 <code>KenshiAffixes.ini</code> 按键覆盖随包设置。开发测试面板默认关闭。源码和构建脚本在工坊包的 <code>Source</code>，详细规则在 <code>Documentation</code>，项目按 GPL-3.0-or-later 提供。</p>
+            </section>
+
+            <section aria-labelledby="progress-title">
+                <h2 id="progress-title">目前做到哪里</h2>
+                <p>从早期的 NPC 装备词条，逐步补上商店价值、探索容器、玩家打造、中英双语提示、等级颜色、稀有战斗效果和名刀组合。v0.6.0 继续调整护甲与战斗平衡：加入闪避和武术词条，限制护甲攻防总加成，将暴击伤害上限设为 ×2，降低护甲暴击词条权重，并提高稀有词条的售价贡献。普通旧随机词条保留原有数值，实际穿戴上限立即生效。</p>
+                <p>本次版本通过 100,232 组原生规则测试和 7 项 Python 测试，并进行了穿戴加成、上限、反复重算与 1,650 次受控原生近战回调检查。这些检查覆盖了具体规则，长期游玩平衡、完整自然 AI 战斗与所有 Mod 组合仍需继续验证。标准 FCS 近战武器和护甲可参与类型识别，特殊 DLL 属性 Mod 需要单独测试；当前测试环境的 Alt+F4 退出异常原因也尚未定位。</p>
+                <p>感谢 <a href="https://github.com/BFrizzleFoShizzle/RE_Kenshi">RE_Kenshi</a> 与 <a href="https://github.com/BFrizzleFoShizzle/KenshiLib">KenshiLib</a> 的作者和贡献者。后续版本以 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3821983877">创意工坊页面</a>的更新记录为准。</p>
+            </section>
+        </article>
+    </main>
+    <footer>Yang Xiao · <a href="../">返回 Game</a> · <a href="../../">返回个人主页</a></footer>
+</div>
+</body>
+</html>
