@@ -313,6 +313,16 @@
           border-radius: 4px;
           box-shadow: 0 1px 4px rgba(0,0,0,0.08);
         }
+        /* Bilingual ODE world-model project showcase */
+        .ode-project { margin-bottom: 40px; padding: 22px; border: 1px solid #dce5e2; border-radius: 12px; background: #f6f9f8; }
+        .ode-project h3 { margin: 0 0 6px; color: var(--primary-color); font-size: 1.25em; }
+        .ode-project .ode-subtitle { margin: 0 0 12px; color: #557268; }
+        .ode-project .ode-videos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+        .ode-project figure { margin: 0; min-width: 0; }
+        .ode-project figcaption { margin-bottom: 8px; font-weight: 600; }
+        .ode-project video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #161d1d; border-radius: 6px; }
+        .ode-project .ode-video-link { display: inline-block; margin-top: 8px; color: var(--accent-color); font-size: .88em; }
+        @media (max-width: 650px) { .ode-project .ode-videos { grid-template-columns: 1fr; } .ode-project { padding: 16px; } }
     </style>
 </head>
 <body>
@@ -439,6 +449,32 @@
     
         <section id="submitted-projects">
             <h2>📝 Submitted Projects</h2>
+
+            <article class="ode-project" id="ode-world-model" aria-labelledby="ode-project-title">
+                <h3 id="ode-project-title">ODE World Model: From Imagination to Action</h3>
+                <p class="ode-subtitle">Differentiable dynamics for humanoid control</p>
+                <p class="paper-intro">From robot states and actions to predicted accelerations, ODE integration, and imagined trajectories: see how return gradients update a policy, then watch the trained policy run in simulation.</p>
+                <p class="paper-intro" lang="zh-CN">从机器人状态与动作出发，经由动力学预测、ODE积分和多步想象，将回报梯度传回策略，最终在真实仿真中执行动作。</p>
+                <div class="ode-videos">
+                    <figure>
+                        <figcaption id="ode-video-en-label">English · 47 seconds</figcaption>
+                        <video controls playsinline preload="none" poster="./projects/ode-world-model/poster-en.jpg" aria-labelledby="ode-video-en-label">
+                            <source src="./projects/ode-world-model/ode-world-model-en.mp4" type="video/mp4">
+                            <a href="./projects/ode-world-model/ode-world-model-en.mp4">Watch the English video</a>
+                        </video>
+                        <a class="ode-video-link" href="./projects/ode-world-model/ode-world-model-en.mp4">Open English video ↗</a>
+                    </figure>
+                    <figure lang="zh-CN">
+                        <figcaption id="ode-video-zh-label">中文版 · 47秒</figcaption>
+                        <video controls playsinline preload="none" poster="./projects/ode-world-model/poster-zh.jpg" aria-labelledby="ode-video-zh-label">
+                            <source src="./projects/ode-world-model/ode-world-model-zh.mp4" type="video/mp4">
+                            <a href="./projects/ode-world-model/ode-world-model-zh.mp4">观看中文版视频</a>
+                        </video>
+                        <a class="ode-video-link" href="./projects/ode-world-model/ode-world-model-zh.mp4">打开中文版视频 ↗</a>
+                    </figure>
+                </div>
+            </article>
+
 
             <div class="paper">
                 <div class="paper-img-container">
